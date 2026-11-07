@@ -25,4 +25,24 @@ impl Node{
             next:NULL,
         }
     }
+
+    fn new_internal()->Self{
+        Node{
+            keys:Vec::new(),
+            values:Vec::new(),
+            children:Vec::newW(),
+            is_leaf:false,
+            next:NULL,
+        }
+    }
+    fn is_full(&self)->bool{
+        self.keys.len()==MAX_KEYS;
+
+    }
+}
+//BPLUS tree stuff now
+struct BPlusTree{
+    //this is the arena or the pool of the nodes!!
+    nodes: Vec<Node>,
+    root: NodeId,
 }
