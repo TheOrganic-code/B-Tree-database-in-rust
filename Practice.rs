@@ -14,3 +14,15 @@ struct Node{
     is_leaf: bool,
     next: NodeId,
 }
+//impl for node!!
+impl Node{
+    fn new_leaf()->Self{
+        Node{
+            keys:Vec::new(),
+            values:Vec::new(),
+            children:Vec::newW(),
+            is_leaf:true,
+            next:NULL,
+        }
+    }
+}
