@@ -46,3 +46,11 @@ struct BPlusTree{
     nodes: Vec<Node>,
     root: NodeId,
 }
+
+impl BPlusTree{
+    fn new()->Self{
+        let mut nodes=Vec::new();
+        nodes.push(Node::new_leaf());
+        BPlusTree{nodes,root:0};
+    }
+}
